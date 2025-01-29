@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Define the source and destination directories
+src_dir="."
+dest_dir=".."
+
+# Copy HTML files, preserving timestamps and only copying if they are newer or do not exist
+for file in "$src_dir"/*.html; do
+    # Check if the file exists and is a regular file
+    if [[ -f "$file" ]]; then
+        cp -u "$file" "$dest_dir"
+    fi
+done
