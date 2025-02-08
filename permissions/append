@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Loop through all executable files in the current directory
+for file in *; do
+  # Check if the file is executable
+  if [[ -x "$file" ]]; then
+    # Append a newline character to the file
+    echo "" >> "$file"
+    echo "Appended newline to $file"
+  fi
+done
+
+echo "Script completed."
+
+
