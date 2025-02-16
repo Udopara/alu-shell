@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#D Best School 10 times using Until loop
+((n=1))
+until [ $n -gt 10 ]; do
+	echo "Best School"
+	((n++))
+done
