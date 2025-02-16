@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Group visitors by IP and HTTP status code,
+# then display data as list 
+
+awk -F' ' '{ print $1 " " $9 }' apache-access.log | sort | uniq -c | sort -nr
